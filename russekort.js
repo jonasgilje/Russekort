@@ -15,8 +15,7 @@ function Russekort(data) {
     push();
     fill(0);
     translate(...data.image.pos);
-    const angleDegrees = (-data.image.angle / 180.0) * PI;
-    rotate(angleDegrees);
+    rotate((-data.image.angle / 180.0) * PI);
     strokeWeight(data.image.s);
     rect(0, 0, ...data.image.size);
     translate(...data.image.translate.map(x => -x));

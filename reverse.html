@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      width="device-width,"
+      initial-scale="1.0,"
+      maximum-scale="1.0,"
+      user-scalable="0"
+    />
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+    <script src="p5.min.js"></script>
+    <script src="addons/p5.dom.min.js"></script>
+    <script src="addons/p5.sound.min.js"></script>
+    <script>
+      function setup() {
+        const data = {
+          size: [1200, 700],
+          text: [
+            {
+              text: "Laget med <3 i p5.js",
+              pos1: [0, 0],
+              pos2: [1200, 100]
+            },
+            {
+              text:
+                "Lage ditt eget DIY-russekort? Se git.jonasgilje.no/Russekort",
+              pos1: [400, 0],
+              pos2: [1200, 100]
+            }
+          ]
+        };
+      }
+
+      const renderText = textObj => {
+        text
+      };
+    </script>
+  </head>
+  <body></body>
+</html>
