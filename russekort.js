@@ -23,6 +23,8 @@ function Russekort(data) {
     rect(0, 0, ...data.image.size);
     pop();
     this.populateImage(data.image);
+    // logo
+    image(imgArray[data.logo.srcIndex], ...data.logo.pos);
     // text
     data.text.forEach(element => {
       this.renderText(element);
@@ -46,5 +48,16 @@ function Russekort(data) {
     ];
   };
 
-  this.renderText = () => {};
+  this.renderText = textObj => {
+    console.log("called on", textObj);
+    const lines = (textObj.text.match(/\n/g) || []).length + 1;
+    const textS = (textObj.yMax - textObj.pos1[1]) / lines;
+    console.log(lines, textS);
+    fill(0);
+    textSize(textS);
+    textStyle(textObj.style ? textObj.style : NORMAL);
+    textAlign(textObj.align, TOP);
+
+    text(textObj.text, textObj.pos1[0], textObj.pos1[1]);
+  };
 }
